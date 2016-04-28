@@ -26,6 +26,12 @@ def get_dashes(perc):
     empty_dashes = " " * (10 - len(dashes))
     return dashes, empty_dashes
 
+def get_bat_status():
+    try:
+        with open('/sys/class/power_supply/BAT0/status', 'r') as fd:
+            return fd.read().strip()
+    except:
+        return ""
 
 def info():
     mem = psutil.virtual_memory()
@@ -35,11 +41,12 @@ def info():
         memused = mem.used
 
     cpu_dashes, cpu_empty_dashes = get_dashes(psutil.cpu_percent(interval=0.1))
-    line = "%s/%sMB [%s%s] %5s%%" % (
+    line = "%s/%sMB [%s%s] %5s%% %s" % (
         str(int(memused / 1024 / 1024)),
         str(int(mem.total / 1024 / 1024)),
         cpu_dashes, cpu_empty_dashes,
         psutil.cpu_percent(interval=0.1),
+        get_bat_status(),
     )
 
     return line
