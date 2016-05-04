@@ -10,7 +10,7 @@ Installation
   Download:
 
 ```bash
-git clone https://github.com/tony/tmux-config.git ~/.tmux
+git clone https://github.com/yarbelk/tmux-config.git ~/.tmux
 ```
 
   Copy tmux config to home:
@@ -172,18 +172,11 @@ Custom:
 
 * `Control + a` then `m` to switch to ``main-horizontal`` layout with the main window at 60% height.
 
-More configs / Tools
---------------------
-
-* *Save / Load your tmux workspaces through JSON or YAML* with [tmuxp](https://github.com/tony/tmuxp).
-* *Clone + Synchronize your git / hg / svn projects through JSON / YAML* with [vcspull](https://github.com/tony/vcspull).
-* *Modular, Lazy-loading vim configuration* with support for C, C++, Python, Go and Javascript with [tony/vim-config](https://github.com/tony/vim-config)
-* *Modular dot-config example* [tony/.dot-config](https://github.com/tony/.dot-config)
 
 Other
 -----
 
-* Github: http://www.github.com/tony
-* Website: http://www.git-pull.com
+* Github: http://www.github.com/yarbelk
 * LICENSE: MIT
 * Author: Tony Narlock (tony@git-pull.com)
+* Author: James Rivett-Carnac (updates)
